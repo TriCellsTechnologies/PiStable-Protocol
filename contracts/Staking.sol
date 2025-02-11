@@ -40,6 +40,7 @@ contract Staking is Ownable {
     function unstake() external {
         Stake storage userStake = stakes[msg.sender];
         require(userStake.amount > 0, "No staked amount");
+        userStake.startTime = 0;  // ← Add this line
 
         uint256 rewards = calculateRewards(msg.sender);
         stakingToken.transfer(msg.sender, userStake.amount);
