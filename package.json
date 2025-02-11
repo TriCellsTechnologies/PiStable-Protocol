@@ -34,7 +34,7 @@
     "webpack-cli": "^4.3.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.14.0",
-    " "eslint-config-airbnb": "^18.2.1"
+    " "eslint-config-airbnb": "^18.2.1"  // ← Remove leading space
   },
   "engines": {
     "node": ">=14.0.0"
