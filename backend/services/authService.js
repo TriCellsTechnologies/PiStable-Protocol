@@ -12,7 +12,7 @@ const register = async ({ username, password, email }) => {
 
 const login = async ({ username, password }) => {
     const user = await User.findOne({ username });
-    if (!user) throw new Error('User  not found');
+    if (!user) throw new Error('User not found');
     
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) throw new Error('Invalid credentials');
