@@ -28,7 +28,7 @@ contract LiquidityPool is Ownable {
         require(amountA > 0 && amountB > 0, "Amounts must be greater than zero");
         
         tokenA.transferFrom(msg.sender, address(this), amountA);
-        token B.transferFrom(msg.sender, address(this), amountB);
+        tokenB.transferFrom(msg.sender, address(this), amountB);
         
         Liquidity storage providerLiquidity = liquidityProviders[msg.sender];
         providerLiquidity.amountA += amountA;
