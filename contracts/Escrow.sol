@@ -73,5 +73,4 @@ contract Escrow is Ownable {
 
         emit DisputeResolved(escrowId, buyerWins);
     ```solidity
-    }
 }
